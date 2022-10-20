@@ -1,17 +1,43 @@
 version: '3.7'
 
 services:
+  mysqldb:
+    image: mysql
+    restart: unless-stopped
+    env_file: ./.env
+    container_name: sport-app-db
+    environment:
+      - MYSQL_ROOT_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - MYSQL_DATABASE=$MYSQLDB_DATABASE
+    ports:
+      - $MYSQLDB_LOCAL_PORT:$MYSQLDB_DOCKER_PORT
+    volumes:
+      - db:/var/lib/mysql
   sport-app:
+    depends_on:
+      - mysqldb
     build:
       context: .
       dockerfile: Dockerfile
       target: base
+    restart: unless-stopped
+    env_file: ./.env
     volumes:
       - ./src:/home/node/app/src
       - ./nodemon.json:/home/node/app/nodemon.json
     container_name: sport-app
-    expose:
-      - '8080'
+    environment:
+      - DB_HOST=mysqldb
+      - DB_USER=$MYSQLDB_USER
+      - DB_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - DB_NAME=$MYSQLDB_DATABASE
+      - DB_PORT=$MYSQLDB_DOCKER_PORT
     ports:
-      - '8080:8080'
+      - $NODE_DOCKER_PORT:$NODE_DOCKER_PORT
+    expose:
+      - $NODE_DOCKER_PORT
+    stdin_open: true
+    tty: true
     command: yarn run dev
+volumes:
+  db:

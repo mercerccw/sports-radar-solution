@@ -1,6 +1,17 @@
-export interface Game {
+import moment from 'moment-timezone';
+
+export class Game {
   id: number;
-  time: string;
-  away: string;
-  home: string;
+  eventTime: string;
+  awayTeam: string;
+  homeTeam: string;
+  constructor(game: any) {
+    this.id = game.id;
+    this.eventTime = moment
+      .tz(game.est, 'America/New_York')
+      .utc()
+      .toISOString();
+    this.awayTeam = game.a;
+    this.homeTeam = game.h;
+  }
 }

@@ -1,5 +1,6 @@
 import express from 'express';
 import { scheduleRouter } from './routers/Schedule';
+require('dotenv').config();
 
 const app = express();
 const PORT = 8080;
