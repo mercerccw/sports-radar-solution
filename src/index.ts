@@ -1,11 +1,11 @@
 import express from 'express';
+import { scheduleRouter } from './routers/Schedule';
 
 const app = express();
 const PORT = 8080;
-
-app.get('/', (req, res) => {
-  res.send('Hello World');
-});
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(scheduleRouter);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
