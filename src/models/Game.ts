@@ -5,6 +5,7 @@ export class Game {
   eventTime: string;
   awayTeam: string;
   homeTeam: string;
+  fullContent: string;
   constructor(game: any) {
     this.id = game.id;
     this.eventTime = moment
@@ -13,5 +14,6 @@ export class Game {
       .format('YYYY-MM-DD HH:mm:ss');
     this.awayTeam = game.a;
     this.homeTeam = game.h;
+    this.fullContent = '';
   }
 }

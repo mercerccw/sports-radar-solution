@@ -3,7 +3,6 @@ import axios from 'axios';
 import { GameModel } from '../Schemas/Game';
 import { Game } from '../models/Game';
 import _ from 'lodash';
-import { sequelize } from '../database';
 
 const scheduleRouter = express.Router();
 

@@ -13,6 +13,7 @@ CREATE TABLE games (
   eventTime DATETIME NOT NULL,
   awayTeam varchar(5) NOT NULL DEFAULT '',
   homeTeam varchar(5) NOT NULL DEFAULT '',
+  fullContent JSON,
   PRIMARY KEY (id)
 );
 

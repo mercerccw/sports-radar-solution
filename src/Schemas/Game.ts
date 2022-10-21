@@ -14,6 +14,7 @@ class GameModel extends Model<
   declare eventTime: string;
   declare awayTeam: string;
   declare homeTeam: string;
+  declare fullContent: string;
 }
 
 GameModel.init(
@@ -25,6 +26,7 @@ GameModel.init(
     eventTime: DataTypes.DATE,
     awayTeam: DataTypes.STRING,
     homeTeam: DataTypes.STRING,
+    fullContent: DataTypes.JSON,
   },
   {
     sequelize,
