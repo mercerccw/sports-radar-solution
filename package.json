@@ -8,7 +8,7 @@
   "scripts": {
     "start": "NODE_PATH=./build node build/index.js",
     "start:live-watch": "nodemon src/liveApp.ts",
-    "test": "jest --setupFiles dotenv/config",
+    "test": "jest --no-cache --runInBand --forceExit",
     "up": "docker-compose up -d",
     "up-prod": "docker-compose -f docker-compose.yml up",
     "down": "docker-compose down",

@@ -6,8 +6,6 @@ import _ from 'lodash';
 
 const scheduleRouter = express.Router();
 
-// scheduleRouter.get('/v1/schedule/history', async (req, res) => {
-// });
 scheduleRouter.get('/v1/schedule', async (req, res) => {
   const seasonStart: number = Number(req.query.season_start);
   const seasonEnd: number = Number(req.query.season_end);

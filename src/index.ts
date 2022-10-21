@@ -1,15 +1,7 @@
 require('dotenv').config();
-import express from 'express';
-import { scheduleRouter } from './routers/Schedule';
-const PORT = process.env.NODE_DOCKER_PORT;
+import { app } from './app';
 
-const app = express();
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-app.use(scheduleRouter);
-app.get('/', (req, res) => {
-  res.status(200).send('Hello World!');
-});
+const PORT = process.env.NODE_DOCKER_PORT;
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

@@ -1,10 +1,12 @@
 require('dotenv').config({ path: '.env.sample' });
-import request from 'supertest';
+import * as http from 'http';
+import supertest from 'supertest';
+
 const app = require('../src/app');
+const apptest = supertest(http.createServer(app));
 
 describe('Test the root path', () => {
   test('It should response the GET method', async () => {
-    const response = await request(app).get('/');
-    expect(response.statusCode).toBe(200);
+    apptest.get('/healthcheck').expect(200);
   });
 });
