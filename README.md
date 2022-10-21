@@ -41,3 +41,8 @@
     "fullContent": "{...}"
 }
 ```
+
+### Extra Info
+
+- The public live feed I used to pull scheduling data was from `https://live.nhl.com/GameData/SeasonSchedule-20222012.json`
+- More data that was backfilled from NHL was documented [here](https://github.com/erunion/sport-api-specifications/tree/master/nhl)
