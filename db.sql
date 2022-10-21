@@ -10,8 +10,17 @@ DROP TABLE IF EXISTS games;
 
 CREATE TABLE games (
   id int(10) NOT NULL,
-  eventTime varchar(30) NOT NULL DEFAULT '',
+  eventTime DATETIME NOT NULL,
   awayTeam varchar(5) NOT NULL DEFAULT '',
   homeTeam varchar(5) NOT NULL DEFAULT '',
+  PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS live_runs;
+
+CREATE TABLE live_runs (
+  id varchar(50) NOT NULL DEFAULT '',
+  startTime DATETIME NOT NULL,
+  endTime DATETIME NOT NULL,
   PRIMARY KEY (id)
 );

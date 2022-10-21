@@ -3,7 +3,6 @@ import {
   InferAttributes,
   InferCreationAttributes,
   DataTypes,
-  CreationOptional,
 } from 'sequelize';
 import { sequelize } from '../database';
 
@@ -23,7 +22,7 @@ GameModel.init(
       type: DataTypes.INTEGER.UNSIGNED,
       primaryKey: true,
     },
-    eventTime: DataTypes.STRING,
+    eventTime: DataTypes.DATE,
     awayTeam: DataTypes.STRING,
     homeTeam: DataTypes.STRING,
   },

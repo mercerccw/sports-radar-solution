@@ -10,7 +10,7 @@ export class Game {
     this.eventTime = moment
       .tz(game.est, 'America/New_York')
       .utc()
-      .toISOString();
+      .format('YYYY-MM-DD HH:mm:ss');
     this.awayTeam = game.a;
     this.homeTeam = game.h;
   }
