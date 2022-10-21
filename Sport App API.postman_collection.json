@@ -1,0 +1,282 @@
+{
+	"info": {
+		"_postman_id": "518acab0-3ecd-4429-b9da-5b6ad0f1ddce",
+		"name": "Sport App API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3721294"
+	},
+	"item": [
+		{
+			"name": "Daily Schedule Run",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/schedule?season_start=2022&season_end=2023",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"schedule"
+					],
+					"query": [
+						{
+							"key": "season_start",
+							"value": "2022"
+						},
+						{
+							"key": "season_end",
+							"value": "2023"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Daily Run Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/schedule?season_start=2022&season_end=2023",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"schedule"
+							],
+							"query": [
+								{
+									"key": "season_start",
+									"value": "2022"
+								},
+								{
+									"key": "season_end",
+									"value": "2023"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "266"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10a-i7gSsrcuLeXbEBlMRdtcAYQb8bU\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 20 Oct 2022 23:09:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"gameCount\": 1312,\n    \"newGames\": 0,\n    \"updatedGames\": 1312,\n    \"participatingTeams\": [\n        \"SJS\",\n        \"NSH\",\n        \"TBL\",\n        \"NYR\",\n        \"VGK\",\n        \"LAK\",\n        \"BOS\",\n        \"WSH\",\n        \"CBJ\",\n        \"CAR\",\n        \"TOR\",\n        \"MTL\",\n        \"CHI\",\n        \"COL\",\n        \"SEA\",\n        \"ANA\",\n        \"VAN\",\n        \"EDM\",\n        \"ARI\",\n        \"PIT\",\n        \"NJD\",\n        \"PHI\",\n        \"OTT\",\n        \"BUF\",\n        \"FLA\",\n        \"NYI\",\n        \"DAL\",\n        \"MIN\",\n        \"CGY\",\n        \"DET\",\n        \"WPG\",\n        \"STL\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Fetch given n days",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/games?days_ago=6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"games"
+					],
+					"query": [
+						{
+							"key": "days_ago",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Daily Run Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/schedule?season_start=2022&season_end=2023",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"schedule"
+							],
+							"query": [
+								{
+									"key": "season_start",
+									"value": "2022"
+								},
+								{
+									"key": "season_end",
+									"value": "2023"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "266"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10a-i7gSsrcuLeXbEBlMRdtcAYQb8bU\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 20 Oct 2022 23:09:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"gameCount\": 1312,\n    \"newGames\": 0,\n    \"updatedGames\": 1312,\n    \"participatingTeams\": [\n        \"SJS\",\n        \"NSH\",\n        \"TBL\",\n        \"NYR\",\n        \"VGK\",\n        \"LAK\",\n        \"BOS\",\n        \"WSH\",\n        \"CBJ\",\n        \"CAR\",\n        \"TOR\",\n        \"MTL\",\n        \"CHI\",\n        \"COL\",\n        \"SEA\",\n        \"ANA\",\n        \"VAN\",\n        \"EDM\",\n        \"ARI\",\n        \"PIT\",\n        \"NJD\",\n        \"PHI\",\n        \"OTT\",\n        \"BUF\",\n        \"FLA\",\n        \"NYI\",\n        \"DAL\",\n        \"MIN\",\n        \"CGY\",\n        \"DET\",\n        \"WPG\",\n        \"STL\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Fetch game by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/games/2022020059",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"games",
+						"2022020059"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Daily Run Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/schedule?season_start=2022&season_end=2023",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"schedule"
+							],
+							"query": [
+								{
+									"key": "season_start",
+									"value": "2022"
+								},
+								{
+									"key": "season_end",
+									"value": "2023"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "266"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10a-i7gSsrcuLeXbEBlMRdtcAYQb8bU\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 20 Oct 2022 23:09:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"gameCount\": 1312,\n    \"newGames\": 0,\n    \"updatedGames\": 1312,\n    \"participatingTeams\": [\n        \"SJS\",\n        \"NSH\",\n        \"TBL\",\n        \"NYR\",\n        \"VGK\",\n        \"LAK\",\n        \"BOS\",\n        \"WSH\",\n        \"CBJ\",\n        \"CAR\",\n        \"TOR\",\n        \"MTL\",\n        \"CHI\",\n        \"COL\",\n        \"SEA\",\n        \"ANA\",\n        \"VAN\",\n        \"EDM\",\n        \"ARI\",\n        \"PIT\",\n        \"NJD\",\n        \"PHI\",\n        \"OTT\",\n        \"BUF\",\n        \"FLA\",\n        \"NYI\",\n        \"DAL\",\n        \"MIN\",\n        \"CGY\",\n        \"DET\",\n        \"WPG\",\n        \"STL\"\n    ]\n}"
+				}
+			]
+		}
+	]
+}

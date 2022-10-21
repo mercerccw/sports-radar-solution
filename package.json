@@ -10,7 +10,6 @@
     "start:live-watch": "nodemon src/liveApp.ts",
     "test": "jest --no-cache --runInBand --forceExit",
     "up": "docker-compose up -d",
-    "up-prod": "docker-compose -f docker-compose.yml up",
     "down": "docker-compose down",
     "build": "tsc -p .",
     "build:docker": "docker-compose build",
