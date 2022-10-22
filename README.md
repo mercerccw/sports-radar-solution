@@ -10,6 +10,7 @@
 
 ### Setup
 
+- run `cp .env.sample .env`
 - run `yarn`
 - run `yarn build:docker`
 - run `yarn up`
